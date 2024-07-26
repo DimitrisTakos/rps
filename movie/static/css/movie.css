@@ -1,0 +1,31 @@
+body {
+    background-image: url("angel.jpg");
+}
+
+.logo {
+    position: relative;
+    left: 800px;
+    border-radius: 50%;
+}
+
+.carousel-inner {
+    position: relative;
+    left: 250px;
+}
+
+.carousel-caption {
+    position: relative;
+    left: -0230px;
+    top: -0125px;
+    color: floralwhite;
+}
+
+.carousel-indicators {
+    top: 455px;
+    left: 585px;
+}
+
+.header {
+    position: relative;
+    left: 750px;
+}

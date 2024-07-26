@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="{% static 'css/movie.css' %}">
+  <link rel="stylesheet" href="{% static 'css/images.css' %}">
+  <title>Perceptron Subs</title>
+
+</head>
+<body>
+<!-- Κύριο μέρος -->
+<img src="{% static "css/Perceptron.jpg"%}" alt="logo" width="300px" height="168px" class="logo">
+<div class="header"><h1>Καλωσορίσατε στο site!</h1>
+</div>
+
+<div class="container-fluid">
+    <h2>Υπότιτλος σε πρόοδο</h2>
+    <div class="row">
+        <div class="col-sm-4">col-sm-4</div>
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">col-sm-4</div>
+    </div>
+</div>
+<div class="container">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+         <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+
+         <div class="item active">
+            <img src="{% static "images/wildcards.jpg" %}" alt="wildcards" style="width:640px; height:480px;">
+            <div class="carousel-caption">
+               <h3>Wild Cards</h3>
+               <p>Season 1 Episode 4</p>
+            </div>
+         </div>
+
+        <div class="item">
+        <img src="{% static "images/roswell.jpg" %}" alt="roswell" style="width:640px; height:480px;">
+        <div class="carousel-caption">
+          <h3>Roswell</h3>
+          <p>Season 4 Episode 1</p>
+        </div>
+      </div>
+
+        <div class="item">
+        <img src="{% static "images/allamerican.jpg" %}" alt="roswell" style="width:640px; height:480px;">
+        <div class="carousel-caption">
+          <h3>All American</h3>
+          <p>Season 3 Episode 8</p>
+        </div>
+      </div>
+    </div>
+    </div>
+</div>
+{% block content %}
+    {% endblock %}
+    <img src="{% static "" %}" alt="wildcards">
+    <img src="{% static "" %}" alt="roswell">
+    <img src="{% static "" %}" alt="allamerican">
+
+
+</body>
+</html>
