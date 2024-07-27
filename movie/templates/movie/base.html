@@ -18,13 +18,17 @@
 </div>
 
 <div class="container-fluid">
-    <h2>Υπότιτλος σε πρόοδο</h2>
-    <div class="row">
-        <div class="col-sm-4">col-sm-4</div>
-        <div class="col-sm-4"></div>
-        <div class="col-sm-4">col-sm-4</div>
+  <div class="row">
+    <div class="col-sm-4">
+        <h2 style="color:darkslateblue;">Υπότιτλος υπο μετάφραση!</h2>
+        <p style ="font-size: large"><b>Πρόοδος μετάφρασης:</b></p>
+        <progress value="22" max="100">22%</progress>
     </div>
+    <div class="col-sm-4">.col-sm-4</div>
+    <div class="col-sm-4">.col-sm-4</div>
+  </div>
 </div>
+
 <div class="container">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
@@ -60,14 +64,18 @@
           <p>Season 3 Episode 8</p>
         </div>
       </div>
+          <footer>
+           <p><b>Θα χαρώ πολύ να λάβω τυχόν σχόλια, παρατηρήσεις ή προτάσεις στο email:</b>
+           <a href="perceptronsubsforall@gmail.com"><b style="font-size: large">perceptronsubsforall@gmail.com</b></a></p>
+          </footer>
     </div>
     </div>
 </div>
+
 {% block content %}
     {% endblock %}
-    <img src="{% static "" %}" alt="wildcards">
-    <img src="{% static "" %}" alt="roswell">
-    <img src="{% static "" %}" alt="allamerican">
+
+
 
 
 </body>
