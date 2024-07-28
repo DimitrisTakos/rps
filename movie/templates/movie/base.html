@@ -9,6 +9,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="{% static 'css/movie.css' %}">
   <link rel="stylesheet" href="{% static 'css/images.css' %}">
+  <link rel="stylesheet" href="{% static 'css/files.file' %}">
   <title>Perceptron Subs</title>
 
 </head>
@@ -25,7 +26,16 @@
         <p style ="font-size: large"><b>Πρόοδος μετάφρασης:</b></p>
         <progress value="22" max="100">22%</progress><br>
 {% for post in posts %}
-        <p style="font-size: large">Τίτλος Επεισοδίου: {{ post.title }}</p>
+    <p style="font-size: large"><b>Τίτλος Επεισοδίου: {{ post.title }}</b></p>
+        <p>
+           {% if post.image %}<img src="{{ post.image.url }}" alt="wildcards" width="300px" height="168px"/>
+           {% endif %}
+        </p>
+    <p style="font-size: large"><b>Περίληψη: {{ post.text|linebreaks }}</b></p>
+    <p style="font-size: large"><b>Ημερομηνία Προβολής: {{ post.production_date }}</b></p>
+    <p style="font-size: large"><b>Διάρκεια: {{ post.duration }}</b></p>
+    <p style="font-size: large"><b>Βαθμολογία: {{ post.grade }}</b></p>
+    <p style="font">Download:</p>
 {% endfor %}
     </div>
     <div class="col-sm-4"><p style="font-size: larger"><b>Καλώς ήρθατε στον απόλυτο προορισμό για υπότιτλους!<br>
@@ -41,6 +51,7 @@
     </div>
     <div class="col-sm-4"><h3 class="heading-text">Αναβάθμιση του site:</h3>
          <h2>Το τραγούδι της εβδομάδας:</h2>
+         <p></p>
              <iframe width="320" height="240" src="https://www.youtube.com/embed/ItqZUFLasKw">
              </iframe>
     </div>

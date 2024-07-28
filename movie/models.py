@@ -14,7 +14,7 @@ class Post(models.Model):
     production_date = models.DateTimeField(blank=True,null=True)
     duration = models.IntegerField()
     grade = models.FloatField()
-    imdb = models.URLField(max_length=200)
+    zip_file = models.FileField(null=True)
 
     def publish(self):
         self.published_date = timezone.now()
