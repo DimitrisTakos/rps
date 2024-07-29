@@ -1,7 +1,6 @@
 from django.conf import settings
 from django.db import models
 from django.utils import timezone
-from embed_video.fields import EmbedVideoField
 
 
 class Post(models.Model):
@@ -14,7 +13,7 @@ class Post(models.Model):
     production_date = models.DateTimeField(blank=True,null=True)
     duration = models.IntegerField()
     grade = models.FloatField()
-    zip_file = models.FileField(null=True)
+    cheatsheet = models.ForeignKey('Cheatsheet',null=True,on_delete=models.CASCADE)
 
     def publish(self):
         self.published_date = timezone.now()
@@ -23,4 +22,12 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
+
+class Cheatsheet(models.Model):
+    title = models.CharField(max_length=100)
+    file = models.FileField(upload_to='cheatsheets/',null=True)
+    uploaded_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
 

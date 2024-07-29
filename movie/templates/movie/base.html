@@ -35,7 +35,8 @@
     <p style="font-size: large"><b>Ημερομηνία Προβολής: {{ post.production_date }}</b></p>
     <p style="font-size: large"><b>Διάρκεια: {{ post.duration }}</b></p>
     <p style="font-size: large"><b>Βαθμολογία: {{ post.grade }}</b></p>
-    <p style="font">Download:</p>
+    <p style="font-size: large"><b>Κατέβασμα υποτίτλου: {{file.title}}</b></p>
+    <button> <a href="{% url 'download_cheatsheet' post.id %}">Download</a></button>
 {% endfor %}
     </div>
     <div class="col-sm-4"><p style="font-size: larger"><b>Καλώς ήρθατε στον απόλυτο προορισμό για υπότιτλους!<br>
