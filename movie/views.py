@@ -3,7 +3,8 @@ from .models import Post
 from .models import Cheatsheet
 from django.http import FileResponse
 from django.shortcuts import get_object_or_404
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render
+from django.http import HttpResponse
 
 # Create your views here.
 
@@ -29,4 +30,9 @@ def cheatsheet(request):
         'files': files
     }
     return render(request, 'movie/base.html', context)
+
+
+def old(request):
+    return render(request, 'movie/secondpage.html',{})
+
 

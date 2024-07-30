@@ -8,6 +8,7 @@ urlpatterns = [
     path('', views.cheatsheet, name="cheatsheet"),
     path('download/<int:cheatsheet_id>/',
          views.download_cheatsheet, name='download_cheatsheet'),
+    path('old/', views.old, name='old'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
