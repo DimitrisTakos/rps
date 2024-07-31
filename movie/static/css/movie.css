@@ -10,7 +10,7 @@ body {
 
 .carousel-inner {
     position: relative;
-    left: 550px;
+    left: 250px;
 }
 
 .carousel-caption {
@@ -33,4 +33,9 @@ body {
 .head {
     position: relative;
     left: 850px;
+}
+
+.container {
+    position: relative;
+    left: 25px;
 }
