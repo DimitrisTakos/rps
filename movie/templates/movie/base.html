@@ -23,10 +23,11 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-4 bg-white text-black">
-        <h2 style="color:darkslateblue;">Υπότιτλος για κατέβασμα!&#128229;</h2>
-        <p style ="font-size: large"><b>Πρόοδος μετάφρασης:</b></p>
-        <progress value="100" max="100">22%</progress><br>
+        <h2 style="color:darkslateblue;">Υπότιτλοι για κατέβασμα!&#128229;</h2>
 {% for posts in posts %}
+    <p style="font-size: large"><b> {{ posts.header }}</b></p>
+    <p style="font-size: large"><b> {{ posts.progress }}</b></p>
+    <progress value="100" max="100">22%</progress>
     <p style="font-size: large"><b>Τίτλος Επεισοδίου: {{ posts.title }} (Διορθωμένος Υπότιτλος)</b></p>
         <p>
            {% if posts.image %}<img src="{{ posts.image.url }}" alt="wildcards" width="300px" height="168px"/>

@@ -5,6 +5,8 @@ from django.utils import timezone
 
 class Post(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
+    header = models.CharField(max_length=200,null=True)
+    progress = models.CharField(max_length=200,null=True)
     title = models.CharField(max_length=200)
     image = models.ImageField(null=True)
     text = models.TextField()
@@ -13,8 +15,8 @@ class Post(models.Model):
     production_date = models.DateTimeField(blank=True,null=True)
     duration = models.IntegerField()
     grade = models.FloatField()
-    cheatsheet = models.ForeignKey('Cheatsheet',null=True,on_delete=models.CASCADE)
-
+    cheatsheet = models.ForeignKey('Cheatsheet', null=True, on_delete=models.CASCADE)
+   
     def publish(self):
         self.published_date = timezone.now()
         self.save()
@@ -31,3 +33,14 @@ class Cheatsheet(models.Model):
     def __str__(self):
         return self.title
 
+
+class Movie(models.Model):
+    title = models.CharField(max_length=100)
+    progress = models.CharField(max_length=200,null=True)
+    image = models.ImageField(null=True)
+    created_date = models.DateTimeField(default=timezone.now)
+    duration = models.IntegerField()
+    grade = models.FloatField()
+
+    def __str__(self):
+        return self.title
