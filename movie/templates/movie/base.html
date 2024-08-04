@@ -26,18 +26,18 @@
         <h2 style="color:darkslateblue;">Υπότιτλος για κατέβασμα!&#128229;</h2>
         <p style ="font-size: large"><b>Πρόοδος μετάφρασης:</b></p>
         <progress value="100" max="100">22%</progress><br>
-{% for post in posts %}
-    <p style="font-size: large"><b>Τίτλος Επεισοδίου: {{ post.title }}</b></p>
+{% for posts in posts %}
+    <p style="font-size: large"><b>Τίτλος Επεισοδίου: {{ posts.title }} (Διορθωμένος Υπότιτλος)</b></p>
         <p>
-           {% if post.image %}<img src="{{ post.image.url }}" alt="wildcards" width="300px" height="168px"/>
+           {% if posts.image %}<img src="{{ posts.image.url }}" alt="wildcards" width="300px" height="168px"/>
            {% endif %}
         </p>
-    <p style="font-size: large"><b>Περίληψη: {{ post.text|linebreaks }}</b></p>
-    <p style="font-size: large"><b>Ημερομηνία Προβολής: {{ post.production_date }}</b></p>
-    <p style="font-size: large"><b>Διάρκεια: {{ post.duration }}</b></p>
-    <p style="font-size: large"><b>Βαθμολογία: {{ post.grade }}</b></p>
+    <p style="font-size: large"><b>Περίληψη: {{ posts.text|linebreaks }}</b></p>
+    <p style="font-size: large"><b>Ημερομηνία Προβολής: {{ posts.production_date }}</b></p>
+    <p style="font-size: large"><b>Διάρκεια: {{ posts.duration }}</b></p>
+    <p style="font-size: large"><b>Βαθμολογία: {{ posts.grade }}</b></p>
     <p style="font-size: large"><b>Κατέβασμα υποτίτλου:</b>
-    </p><button> <a href="{% url 'download_cheatsheet' post.id %}">Κατέβασμα</a></button>
+    </p><button> <a href="{% url 'download_cheatsheet' posts.id %}">Κατέβασμα</a></button>
 {% endfor %}
     </div>
     <div class="col-sm-4"><p style="font-size: larger"><b>Καλώς ήρθατε στον απόλυτο προορισμό για υπότιτλους!<br>
