@@ -16,7 +16,8 @@ class Post(models.Model):
     duration = models.IntegerField()
     grade = models.FloatField()
     cheatsheet = models.ForeignKey('Cheatsheet', null=True, on_delete=models.CASCADE)
-   
+    movie = models.ForeignKey('Movie', null=True, on_delete=models.CASCADE)
+
     def publish(self):
         self.published_date = timezone.now()
         self.save()
