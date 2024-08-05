@@ -7,4 +7,3 @@ from .models import Cheatsheet
 admin.site.register(Post)
 admin.site.register(Cheatsheet)
 
-

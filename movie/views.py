@@ -1,5 +1,5 @@
 from django.utils import timezone
-from .models import Post, Movie
+from .models import Post
 from .models import Cheatsheet
 from django.http import FileResponse
 from django.shortcuts import get_object_or_404
@@ -34,8 +34,3 @@ def cheatsheet(request):
 
 def old(request):
     return render(request, 'movie/secondpage.html',{})
-
-
-def movies(request):
-    movies = Movie.objects.all()
-    return render(request, 'movie/base.html', {'movies': movies})

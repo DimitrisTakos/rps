@@ -9,14 +9,13 @@ class Post(models.Model):
     progress = models.CharField(max_length=200,null=True)
     title = models.CharField(max_length=200)
     image = models.ImageField(null=True)
-    text = models.TextField()
+    text = models.CharField(max_length=2000,null=True)
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True,null=True)
     production_date = models.DateTimeField(blank=True,null=True)
-    duration = models.IntegerField()
-    grade = models.FloatField()
+    duration = models.CharField(max_length=200,null=True)
+    grade = models.CharField(max_length=200,null=True)
     cheatsheet = models.ForeignKey('Cheatsheet', null=True, on_delete=models.CASCADE)
-    movie = models.ForeignKey('Movie', null=True, on_delete=models.CASCADE)
 
     def publish(self):
         self.published_date = timezone.now()
@@ -30,18 +29,6 @@ class Cheatsheet(models.Model):
     title = models.CharField(max_length=100)
     file = models.FileField(upload_to='cheatsheets/',null=True)
     uploaded_at = models.DateTimeField(auto_now_add=True)
-
-    def __str__(self):
-        return self.title
-
-
-class Movie(models.Model):
-    title = models.CharField(max_length=100)
-    progress = models.CharField(max_length=200,null=True)
-    image = models.ImageField(null=True)
-    created_date = models.DateTimeField(default=timezone.now)
-    duration = models.IntegerField()
-    grade = models.FloatField()
 
     def __str__(self):
         return self.title

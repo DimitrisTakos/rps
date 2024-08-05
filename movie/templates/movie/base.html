@@ -3,6 +3,15 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
+    <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EEDET47930"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-EEDET47930');
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -33,7 +42,7 @@
            {% if posts.image %}<img src="{{ posts.image.url }}" alt="wildcards" width="300px" height="168px"/>
            {% endif %}
         </p>
-    <p style="font-size: large"><b>Περίληψη: {{ posts.text|linebreaks }}</b></p>
+    <p style="font-size: large"><b>Περίληψη: {{ posts.text}}</b></p>
     <p style="font-size: large"><b>Ημερομηνία Προβολής: {{ posts.production_date }}</b></p>
     <p style="font-size: large"><b>Διάρκεια: {{ posts.duration }}</b></p>
     <p style="font-size: large"><b>Βαθμολογία: {{ posts.grade }}</b></p>
@@ -47,17 +56,20 @@
     Το εύχρηστο site επιτρέπει να αναζητήσετε<br>
     και να κατεβάσετε υπότιτλους εύκολα και γρήγορα.<br>
     Είτε είστε σινεφίλ, είτε λάτρης των σειρών και των ταινιών,<br>
-    βρίσκεται ο κατάλληλος υπότιτλος για εσάς.<br>
+    εδώ βρίσκεται ο κατάλληλος υπότιτλος για εσάς.<br>
     Εξερευνήστε τη συλλογή μου και ξεκινήστε την περιπέτεια της ψυχαγωγίας με υπότιτλους!</b><br>
     </p>
     <p style="font-size: large"><b>Σύντομα μετάφραση σχεδόν εξ ακοής:</b></p>
     <img src="{% static "css/movie1.jpg" %}" alt="movie1" class="movie1" >
     <p style="font-size: large"><b>Trailer:</b></p>
-        <iframe width="580" height="240" src="https://www.youtube.com/embed/Idh8n5XuYIA">
-             </iframe>
+        <iframe width="580" height="400" src="https://www.youtube.com/embed/Idh8n5XuYIA">
+             </iframe><br>
+    <p style="font-size: large"><b>Πρόοδος μετάφρασης:</b></p>
+    <progress value="75" max="100">22%</progress><p style="font-size: large"><b>75%</b></p>
     </div>
     <div class="col-sm-4"><h3 class="heading-text">Αναβάθμιση του site:</h3>
         <p style="font-size: large"><b>Έκδοση 1.0:Ρύθμιση ώστε να τραβάει το ανέβασμα των σειρών ο web browser από την βάση δεδομένων.</b>
+        <p style="font-size: large"><b>Έκδοση 1.1:Έγιναν κάποια αλλαγές στην βάση δεδομένων</b>
         </p>
          <h2>Το τραγούδι της εβδομάδας:</h2>
          <p></p>
